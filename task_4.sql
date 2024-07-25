@@ -1,2 +1,7 @@
-use alx_book_store;
-print('this is database for alx book store')
+USE alx_book_store;
+
+SELECT Books,
+FROM
+    INFORMATION_SCHEMA.Books
+WHERE
+    TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'books';

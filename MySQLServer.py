@@ -16,7 +16,7 @@ if mydb.is_connected():
 
 else:
     cursor = mydb.cursor()
-    cursor.execute('CREATE DATABASE IF NOT EXISTS ALX_BOOK_STORE')
+    cursor.execute('CREATE DATABASE IF NOT EXISTS alx_book_store')
 
 
 

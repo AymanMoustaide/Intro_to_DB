@@ -1,5 +1,6 @@
 import mysql.connector
 
+
 mydb = mysql.connector.connect(
     host = '127.0.0.1',
     port = '3306',
@@ -8,7 +9,18 @@ mydb = mysql.connector.connect(
     database = 'alx_book_store',
 )
 
+if mydb.is_connected():
+    print('Database alx_book_store is connected!')
 
-print(mydb.get_server_info())
+else:
+    #* EXECUTE COMMAND TO DB
+    cursor = mydb.cursor()
+    cursor.execute('CREATE DATABASE IF NOT EXISTS alx_book_store')
 
-print('Database alx_book_store created successfully!')
+
+
+
+
+
+
+
